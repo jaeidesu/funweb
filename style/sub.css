@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import url(./common.css);
+
+/* 서브공통스타일 */
+#container {
+    padding-bottom: 20px;
+}
+#subHeader {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subHeader::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    opacity: 0.5;
+}
+#subHeader h2 {
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+/* 서브타이틀이미지 개별 */
+#subHeader.subHeaderCompany {
+    background-image: url(../images/bgSubCompany.jpg);
+    background-position: center;
+}
+#subHeader.subHeaderCustomer {
+    background-image: url(../images/bgSubCustomer.jpg);
+    background-position: bottom;
+}
+/* 선택자 우선순위! 아이디랑 클래스 사이에 띄우지 x */
+
+
+
+/* 서브네비 snb */
+#snb {
+    width: 100%;
+    border-bottom: 0.1px solid #fff;
+    display: flex;
+    justify-content: center;
+}
+#snb ul {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#snb ul li {
+    width: 30%;
+    height: 53px;
+    background: transparent;
+    text-align: center;
+}
+#snb ul li.on a {
+    border-bottom: 2px solid #2da5f5;
+}
+#snb ul li a {
+    background: url(../images/subBullet.png) no-repeat right 10px center; /*요거 기억하기!*/
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 53px;
+    text-transform: uppercase;
+    border-left: 0.1px solid #fff;
+}
+#snb ul li:last-child {
+    border-left: 0.1px solid #fff;
+    border-right: 0.1px solid #fff;
+}
+
+/* 서브페이지 본문 공통 */
+
+#subContent {
+    width: 1200px;
+    margin: 0 auto;
+}
+#subContent h3 {
+    padding: 45px 0 40px;
+    /* font-size: 45px;
+    font-weight: normal;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif; */
+    font: 45px 'Times New Roman', serif;
+    /* 원래 h3은 굵기를 가지고 있지만 생략하게 될 경우 normal의 값을 가지므로 normal은 생략해도 된다 */
+}
+
+/* 개별페이지 시작 */
+/* 서브 콘텐츠 - welcome */
+#subContent {
+    width: 1200px;
+    overflow: hidden;
+    padding: 0 0 50px;
+    color: #fff;
+}
+#subContent h3 {}
+#subContent figure {
+    float: right;
+    margin: 0 14px;
+}
+#subContent figure figcaption {
+    font-size: 14px;
+}
+#subContent p {
+    padding: 0 10px 20px;
+}
+
+/* 서브 콘텐츠 - notice */
+.subContentNotice {}
+#notice {
+    border-collapse: collapse;
+    /* text-align: center; */
+}
+#notice th {
+    height: 30px;
+    color: #fff;
+    background: linear-gradient(#67afeb, #3c93ef 49%, #338bef 50%, #2871e0);
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#notice .no {
+    width: 70px;
+    border-radius: 5px 0 0 5px;
+}
+#notice .title {
+    width: 804px;
+}
+#notice .write {
+    width: 120px;
+}
+#notice .date {
+    width: 116px;
+}
+#notice .read {
+    width: 90px;
+    border-radius: 0 5px 5px 0;
+}
+#notice td {
+    height: 45px;
+    border-bottom: 1px dotted #999;
+}
+#notice td div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 804px;
+}
+/* #notice td:nth-child(2) {
+    text-align: left;
+} */
+#notice td:not(td:nth-child(2)) {
+    text-align: center;
+}
+
+#noticeSearch {
+    display: flex;
+    justify-content: end;
+    margin: 15px 30px 0; 
+}
+#searchBox {
+    width: 222px;
+    height: 22px;
+    font-size: 12px;
+    padding-left: 12px;
+    border: 0.1px solid #333;
+    border-radius: 5px;
+    background: #fff;
+}
+#searchBtn {
+    width: 90px;
+    height: 22px;
+    border: 0.1px solid #333;
+    border-radius: 5px;
+    background: linear-gradient(#67afeb, #3c93ef 49%, #338bef 50%, #2871e0);
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #fff;
+}
+#pageControl {
+    text-align: center;
+    margin: 30px 0 0;
+    font-weight: normal;
+}
+#pageControl a {
+    color: #fff;
+    margin: 0 10px;
+}
